@@ -97,6 +97,15 @@ public class Registro implements Serializable {
         return new int[]{-1, -1};
     }
 
-
+    public Cliente buscarPorDNI(int dni){
+        for (int i = 0;i < numPisos;i++){
+            for (int j = 0;j < numHab;j++){
+                if (habitaciones[j][i].getDni() == dni){
+                    return habitaciones[j][i];
+                }
+            }
+        }
+        return new Cliente();
+    }
 }
 
